@@ -428,7 +428,7 @@ const InternalUploader: ForwardRefRenderFunction<
         fileItem.url = fileType === 'video' ? file.thumbTempFilePath : filepath
       }
       executeUpload(fileItem, index)
-      setFileList([...fileList, fileItem])
+      setFileList(prevStatus=>[...prevStatus, fileItem])
     })
   }
 
